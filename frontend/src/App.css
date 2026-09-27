@@ -1,0 +1,214 @@
+body{
+    margin: 0;
+}
+.login-page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:linear-gradient(
+    135deg,
+    #12002f,
+    #4b006e,
+    #ff1493);
+
+    position: relative;
+    overflow: hidden;
+}
+.login-page::before{
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: #00ffff;
+    border-radius: 50%;
+    
+    filter: blur(100px);
+    top: -100px;
+    left: -100px;
+
+    opacity: 0.5;
+}
+.login-page::after{
+     content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background: #ff00ff;
+    border-radius: 50%;
+    
+    filter: blur(120px);
+    top: -150px;
+    right: -100px;
+
+    opacity: 0.5;
+}
+
+.website-name {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  z-index: 2;
+}
+
+.login-box{
+    width: 350px;
+    padding: 30px;
+
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rbga(0, 0, 0, 0.4);
+
+    position: relative;
+    z-index: 1;
+}
+.login-box h1{
+    text-align: center;
+    color: white;
+    letter-spacing: 4px;
+}
+.login-box input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    color: white;
+}
+.login-box input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+.login-box button{
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #ff1493;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 15px #ff1493;
+}
+.login-box button:hover{
+    background: #ff4db8;
+    box-shadow: 0 0 30px #ff1493;
+}
+.login-box input:focus{
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+}
+.disco-ball{
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background:linear-gradient(
+        45deg,
+        #ffffff 25%,
+        #888888 25%,
+        #888888 50%,
+        #ffffff 50%,
+        #ffffff 75%,
+        #888888 75%
+    ) ;
+    background-size: 20px 20px;
+
+    box-shadow:  0 0 20px #ffffff,
+                 0 0 50px #ff00ff;
+
+    position: absolute;
+
+    top: 50px;
+    right: 100px;
+
+    animation: rotateBall 8s linear infinite;
+
+}
+
+.shape {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  opacity: 0.7;
+}
+.shape-one {
+  background: #00ffff;
+
+  top: 20%;
+  left: 15%;
+
+  transform: rotate(45deg);
+
+  animation: floatOne 5s ease-in-out infinite;
+
+}
+.shape-two {
+  background: #ff1493;
+
+  bottom: 20%;
+  left: 10%;
+
+  border-radius: 50%;
+
+  transform: rotate(45deg);
+
+  animation: floatOne 5s ease-in-out infinite;
+}
+.shape-three {
+  background: #ffff00;
+
+  top: 30%;
+  right: 15%;
+
+  transform: rotate(20deg);
+
+  transform: rotate(45deg);
+
+  animation: floatOne 5s ease-in-out infinite;
+}
+@keyframes rotateBall {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes floatOne {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(-30px) rotate(90deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}

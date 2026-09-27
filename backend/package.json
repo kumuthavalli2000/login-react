@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
