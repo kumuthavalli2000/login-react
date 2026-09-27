@@ -21,7 +21,7 @@ function App() {
       password: key,
     });
     logindetails.then(function (data) {
-      if (data.data == true) {
+      if (data.data === true) {
         Navigate("/success");
       } else {
         Navigate("/fail");

@@ -26,7 +26,7 @@ function AccCreation() {
       username: user,
     });
     registrationdetails.then(function (data) {
-      if (data.data == true) {
+      if (data.data === true) {
         Navigate("/");
       } else {
         Navigate("/fail");
