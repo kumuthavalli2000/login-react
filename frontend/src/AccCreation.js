@@ -20,7 +20,7 @@ function AccCreation() {
   };
   const handleRegister = (evt) => {
     evt.preventDefault();
-    var registrationdetails = axios.post("http://localhost:5001/register", {
+    var registrationdetails = axios.post("https://login-react-yejy.onrender.com/register", {
       email: mail,
       password: key,
       username: user,
